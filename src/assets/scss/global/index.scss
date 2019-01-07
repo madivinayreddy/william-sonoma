@@ -1,0 +1,8 @@
+@import "./classes";
+@import "reset";
+@import "../common/index";
+
+body {
+  @include clearfix;
+  font-family: $font-content;
+}

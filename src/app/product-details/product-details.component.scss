@@ -1,0 +1,86 @@
+@import "src/assets/scss/common/tooling";
+
+.product {
+  &-back {
+    padding-top: 30px;
+    img {
+      height: 40px;
+    }
+  }
+  &-wrapper {
+    padding: 40px 0px;
+    display: flex;
+    @include breakpoint(499) {
+      flex-direction: column;
+    }
+  }
+  &-image {
+    flex: 1;
+    img {
+      width: 100%;
+    }
+    &-wrapper {
+      display: flex;
+      padding-top: 30px;
+    }
+  }
+  &-details {
+    flex: 1;
+    padding-left: 30px;
+    padding-top: 30px;
+    @include breakpoint(768) {
+      padding-top: 0px;
+    }
+    @include breakpoint(499) {
+      padding-left: 0;
+      padding-top: 10px;
+    }
+  }
+  &-title {
+    font-size: 28px;
+    color: #565458;
+    line-height: 2;
+    @include breakpoint(768) {
+      line-height: 1.5;
+    }
+    @include breakpoint(499) {
+      font-size: 20px;
+    }
+  }
+  &-price {
+    padding-top: 20px;
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    .regular-price {
+      color: #565458;
+      font-weight: bold;
+      text-decoration: line-through;
+      padding-right: 20px;
+    }
+    .special-price {
+      span:first-child {
+        text-transform: capitalize;
+      }
+      color: #a31af1;
+      font-weight: bold;
+      padding: 10px 0;
+    }
+  }
+  &-message {
+    padding-top: 20px;
+    font-weight: bold;
+    color: #a31af1;
+    font-size: 13px;
+  }
+  &-zoom {
+    margin: 0.3rem;
+    font-size: 13px;
+    font-weight: bold;
+    color: #565458;
+  }
+  &-group {
+    margin: 0.3rem;
+    cursor: pointer;
+  }
+}

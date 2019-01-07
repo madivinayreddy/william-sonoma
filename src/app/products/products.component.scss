@@ -1,0 +1,46 @@
+.detail-wrapper {
+  padding: 10px;
+  font-size: 13px;
+  text-align: left;
+  p {
+    color: #050708;
+    font-size: 13px;
+    line-height: 21px;
+    padding-bottom: 5px;
+  }
+  > .message {
+    color: #a31af1;
+    font-weight: bold;
+  }
+}
+
+.product-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px 0px 60px;
+  justify-content: space-between;
+}
+
+.product-header {
+  padding: 30px 0px 0px;
+  text-align: center;
+  text-decoration: underline;
+  color: #a31af1;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+
+.regular-price {
+  color: #565458;
+  font-weight: bold;
+  text-decoration: line-through;
+}
+
+.special-price {
+  span:first-child {
+    text-transform: capitalize;
+  }
+  color: #a31af1;
+  font-weight: bold;
+  padding: 10px 0;
+}

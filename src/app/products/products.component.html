@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="product-header">PRODUCTS</div>
+  <div class="product-wrapper">
+    <div class="card" *ngFor="let product of products">
+      <a [href]="product.id">
+        <img [src]="product.thumbnail.href" alt="no-img" />
+        <div class="detail-wrapper">
+          <p [innerHTML]="product.name"></p>
+          <p class="message">{{ product.messages[0] }}</p>
+          <div class="regular-price">
+            <span>${{ product.priceRange.regular.low }}</span> -
+            <span>${{ product.priceRange.regular.high }}</span>
+          </div>
+          <div class="special-price">
+            <span>{{ product.priceRange.type }}</span
+            >&nbsp; <span>${{ product.priceRange.selling.low }}</span> -
+            <span>${{ product.priceRange.selling.high }}</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

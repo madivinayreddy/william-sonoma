@@ -1,0 +1,10 @@
+<div class="image-wrapper">
+  <div class="image-list">
+    <div class="image-single" *ngFor="let d of productImage.data">
+      <img (click)="onChange(d.href)" [src]="d.href" alt="" />
+    </div>
+  </div>
+  <div class="image-display">
+    <img [src]="selectedImage" alt="" srcset="" />
+  </div>
+</div>

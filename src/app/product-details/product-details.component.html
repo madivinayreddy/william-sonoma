@@ -1,0 +1,37 @@
+<div *ngIf="product" class="container">
+  <div class="product-back">
+    <a [routerLink]="['']"
+      ><img src="/assets/back-arrow.svg" alt="" srcset=""
+    /></a>
+  </div>
+  <div class="product-wrapper">
+    <div class="product-image">
+      <img [src]="product.hero.href" alt="no-img" />
+    </div>
+    <div class="product-details">
+      <p class="product-title" [innerHTML]="product.name"></p>
+      <div class="product-price">
+        <div class="regular-price">
+          <span>${{ product.priceRange.regular.low }}</span> -
+          <span>${{ product.priceRange.regular.high }}</span>
+        </div>
+        <div class="special-price">
+          <span>{{ product.priceRange.type }}</span
+          >&nbsp; <span>${{ product.priceRange.selling.low }}</span> -
+          <span>${{ product.priceRange.selling.high }}</span>
+        </div>
+      </div>
+      <p class="product-message">{{ product.messages[0] }}</p>
+      <div class="product-image-wrapper">
+        <div class="product-group" *ngFor="let image of product.images">
+          <img
+            (click)="openDialog(image.href)"
+            [src]="image.href"
+            alt="no-img"
+          />
+        </div>
+      </div>
+      <p class="product-zoom">Click to zoom image</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+@import "src/assets/scss/common/tooling";
+
+.image {
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    @include breakpoint(499) {
+      flex-direction: column-reverse;
+    }
+  }
+  &-list {
+    flex: 1;
+    @include breakpoint(499) {
+      display: flex;
+    }
+  }
+  &-display {
+    flex: 2;
+    img {
+      width: 100%;
+    }
+  }
+  &-single {
+    margin: 0.5rem 0;
+    @include breakpoint(499) {
+      margin: 0.5rem;
+    }
+    img {
+      height: 140px;
+      cursor: pointer;
+      @include breakpoint(499) {
+        height: auto;
+      }
+    }
+  }
+}
